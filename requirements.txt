@@ -1,0 +1,12 @@
+functions-framework==3.*
+flask>=1.0.2
+requests==2.27.1
+google-api-python-client==2.*
+google-auth==2.*
+pandas==1.*
+numpy==1.*
+python-dotenv==0.10.1
+pandas-gbq==0.*
+mysql-connector-python
+google-cloud-logging==3.*
+Flask-Cors==1.*
