@@ -1,6 +1,6 @@
 FROM python:3.9
 
-WORKDIR /mergingscrapes/
+WORKDIR /merge_2/
 COPY . ./
 ADD main.py .
 ADD requirements.txt .
