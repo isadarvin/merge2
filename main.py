@@ -38,7 +38,7 @@ def cleaninstagramfollower():
     client = google.cloud.logging.Client()
     client.setup_logging()
 
-    df = pd.DataFrame(json_data)
+    df = pd.DataFrame(payload)
 
     df = df.rename(columns={'public_email':'email', 'contact_phone_number':'Phone'})
     df = df.dropna(subset=['email', 'Phone'], how = 'all')
@@ -67,7 +67,7 @@ def cleaninstagramprofile():
     client = google.cloud.logging.Client()
     client.setup_logging()
 
-    df = pd.DataFrame(json_data)
+    df = pd.DataFrame(payload)
     
     df = df.rename(columns={'public_email':'email', 'contact_phone_number':'Phone'})
     df = df.dropna(subset=['email', 'Phone'], how = 'all')
@@ -96,7 +96,7 @@ def cleaninstagramhashtag():
     client = google.cloud.logging.Client()
     client.setup_logging()
 
-    df = pd.DataFrame(json_data)
+    df = pd.DataFrame(payload)
     df = df.rename(columns={'phone':'Phone'})
     df = df.dropna(subset=['email', 'Phone'], how = 'all')
     try:
