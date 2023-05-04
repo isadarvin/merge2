@@ -215,3 +215,6 @@ def ingestform():
 def sending_to_bq(full_csv):
     full_csv.to_gbq(f"people-first-337420.Staging.{scrape_name}_{date_cleaned}", project_id="people-first-337420", if_exists = 'replace')
 """
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))
